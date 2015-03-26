@@ -19,7 +19,6 @@ class Cars extends CI_Controller {
 
     /*  public function show() {
       $lista = $this->cars_m->get_all();
-      $data['list'] = $lista;
       $this->load->view('admin/header');
       $this->load->view('admin/users/lista', $data);
       $this->load->view('admin/footer');
