@@ -1,9 +1,16 @@
-<div>
+<div class="wraper">
+    <div>
+        <?php if($this->session->flashdata('success')): ?>
+            <p class="success"><?php echo $this->session->flashdata('success'); ?></p>
+        <?php endif; ?>
+    </div>
     <h2>Lista użytkowników</h2>
     <div>
-        <table>
+        <a href="<?php echo base_url('admin/users/create');  ?>" class="btn btn-info" role="button">Dodaj użytkownika</a>
+        <table class="table-bordered" data-toggle="table">
+              <thead>
             <tr>
-                <th>Nazwa</th>
+                <th >Nazwa</th>
                 <th>Login</th>
                 <th>Email</th>
                 <th>Admin</th>
@@ -38,6 +45,7 @@
                         <td colspan="3">brak użytkowników</td>
                     </tr>
             <?php endif; ?>
+                      </thead>
         </table>
     </div>
 </div>

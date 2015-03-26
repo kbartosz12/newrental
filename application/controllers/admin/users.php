@@ -81,10 +81,11 @@ class Users extends CI_Controller {
      * @param strig $user_id ID użytkownika
      */
     public function edit_post($user_id) {
-        $this->user_validation();
+        $this->user_validation(true);
         if ($this->form_validation->run()) {
             $data = $this->readData();
             $this->users_m->update($user_id, $data);
+            $this->session->set_flashdata('success', 'Użytkowink został popranie zmieniony.');
             redirect('admin/users/lista');
         } else {
             $this->edit($user_id);
@@ -116,13 +117,18 @@ class Users extends CI_Controller {
         );
     }
 
-    private function user_validation() {
+    private function user_validation($edit = FALSE) {
         $this->form_validation->set_rules('name', 'Imię i nazwisko', 'required');
         $this->form_validation->set_rules('login', 'login', 'required|is_unique[users.login]');
-        $this->form_validation->set_rules('password', 'password', 'required|matches[password2]');
-        $this->form_validation->set_rules('password2', 'password2', 'required');
         $this->form_validation->set_rules('group_id', 'group_id', 'required|integer');
         $this->form_validation->set_rules('mail', 'email', 'required|valid_email');
+        
+        if(!$edit || ($this->input->post('password') && !empty($this->input->post('password'))))
+        {
+            $this->form_validation->set_rules('password', 'password', 'required|matches[password2]');
+            $this->form_validation->set_rules('password2', 'password2', 'required');
+        }
     }
+    
 
 }

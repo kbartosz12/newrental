@@ -46,6 +46,7 @@ class Cars extends CI_Controller {
 
 
             $this->cars_m->insert($data);
+            //tu redirect do car-list
         } else {
             
         }

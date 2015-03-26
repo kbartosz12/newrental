@@ -1,0 +1,19 @@
+body{
+    
+}
+div.wraper{
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid;
+    padding: 50px;
+    border-radius: 10px;
+}
+.wraper table{
+    width: 100%;
+}
+ table th, table td
+{
+    padding: 5px 10px;
+}
