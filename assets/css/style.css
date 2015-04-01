@@ -1,6 +1,31 @@
 body{
     
+    
+    background-color: #0F2E4C;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Tahoma, Georfia, serif;
+    color: white;
+    
 }
+
+a:link {
+    color: #FFFFFF;
+}
+
+a:visited {
+    color: #FFFFFF;
+}
+
+a:hover {
+    color: #CFCFCF;
+}
+
+div{
+    background-color: #527ACC;
+}
+
 div.wraper{
     width: 1000px;
     margin: 0 auto;
@@ -12,6 +37,7 @@ div.wraper{
 }
 .wraper table{
     width: 100%;
+    
 }
  table th, table td
 {

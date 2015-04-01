@@ -1,3 +1,4 @@
+
 <?php
 
 /*
@@ -20,7 +21,8 @@ class Index extends CI_Controller {
     public function index() {
 
         $admin = $this->session->userdata('admin');
-        echo 'cześć ' . $admin->name;
+        //echo 'cześć ' . $admin->name;
+        redirect('admin/users');
     }
 
 }

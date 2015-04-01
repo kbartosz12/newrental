@@ -1,7 +1,7 @@
 <div id="container">
     <?php if (validation_errors()): ?>
         <div style="border: lpx solid red;">
-            <?php echo "Są błędy. zobacz niżej" ?>
+            <?php echo "Pojawiły się błędy, zobacz niżej" ?>
         </div>
     <?php endif; ?>
     <form method="post">

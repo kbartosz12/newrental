@@ -1,11 +1,11 @@
 <html>
 <head>
-	<title>403 Forbidden</title>
+	
         <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 <body>
 
-<p>Directory access is forbidden.</p>
+
 
 </body>
 </html>
