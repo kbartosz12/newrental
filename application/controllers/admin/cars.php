@@ -24,6 +24,7 @@ class Cars extends CI_Controller {
       $this->load->view('admin/footer');
       } */
 
+    
     public function addCar() {
 
         $this->form_validation->set_rules('brand_id', 'Imię i nazwisko', 'required|integer');
