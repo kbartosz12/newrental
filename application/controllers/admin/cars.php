@@ -12,6 +12,7 @@ class Cars extends CI_Controller {
         $data = array();
 
         $data['cars'] = $this->cars_m->get_all();
+        $data['brands'] = $this->brands_m->get_all();
         $this->load->view('admin/header');
         $this->load->view('admin/cars/cars', $data);
         $this->load->view('admin/footer');
@@ -24,7 +25,6 @@ class Cars extends CI_Controller {
       $this->load->view('admin/footer');
       } */
 
-    
     public function addCar() {
 
         $this->form_validation->set_rules('brand_id', 'Imię i nazwisko', 'required|integer');

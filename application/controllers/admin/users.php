@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Description of users
  *
@@ -22,9 +23,10 @@ class Users extends CI_Controller {
      * Metoda a właściwie akcja odpalana dla kontrolera Users
      */
     public function index() {
+
         $this->lista();
     }
-    
+
     /**
      * Akcja generująca listę użytkowników
      */
@@ -46,6 +48,8 @@ class Users extends CI_Controller {
      * dodawania nowego użytkownika
      */
     public function create() {
+        $this->load->view('admin/header');
+        $this->load->view('admin/footer');
         // walidacja danych
         $this->user_validation();
         //jeżeli są dane i przeszły walidację
@@ -73,6 +77,8 @@ class Users extends CI_Controller {
      * @param int $user_id ID użytkownika
      */
     public function delete($user_id) {
+        $this->load->view('admin/header');
+        $this->load->view('admin/footer');
         //sprawdzenie czy przekazana wartość jest numerem
         if (ctype_digit($user_id)) {
             //usunięcie encji użytkownika o id $user_id
@@ -86,7 +92,12 @@ class Users extends CI_Controller {
     /*
      * Strona z formularzem edycji 
      */
+
     public function edit($user_id) {
+        //$this->load->view('assets/css/style.css');
+        $this->load->view('admin/header');
+        $this->load->view('admin/footer');
+
         if (ctype_digit($user_id)) {
             // jeżeli użytkownik nie istnieje w bazie, to nie ma co edytować
             $qweert = $this->users_m->get($user_id);
@@ -123,6 +134,8 @@ class Users extends CI_Controller {
      * Czy tego też używamy?
      */
     public function add() {
+        $this->load->view('admin/header');
+        $this->load->view('admin/footer');
         $this->user_validation();
         if ($this->form_validation->run()) {
             $data = $this->readData();
@@ -160,14 +173,12 @@ class Users extends CI_Controller {
         $this->form_validation->set_rules('login', 'login', 'required|is_unique[users.login]');
         $this->form_validation->set_rules('group_id', 'group_id', 'required|integer');
         $this->form_validation->set_rules('mail', 'email', 'required|valid_email');
-        
+
         // jeżeli wprowadzamy nowego użytkownika (!$edit) lub gdy pole password nie jest puste
-        if(!$edit || ($this->input->post('password') && !empty($this->input->post('password'))))
-        {
+        if (!$edit || ($this->input->post('password') && !empty($this->input->post('password')))) {
             $this->form_validation->set_rules('password', 'password', 'required|matches[password2]');
             $this->form_validation->set_rules('password2', 'password2', 'required');
         }
     }
-    
 
 }

@@ -13,6 +13,8 @@ class Welcome extends CI_Controller {
     }
 
     public function index() {
+        $this->load->view('admin/header');
+        $this->load->view('admin/footer');
 
         $this->form_validation->set_rules('login', 'login', 'required');
         $this->form_validation->set_rules('password', 'password', 'required');

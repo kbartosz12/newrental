@@ -1,13 +1,13 @@
 body{
-    
-    
+
+
     background-color: #0F2E4C;
     width: auto;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 100px;
+    margin-right: 100px;
     font-family: Tahoma, Georfia, serif;
     color: white;
-    
+
 }
 
 a:link {
@@ -23,9 +23,62 @@ a:hover {
 }
 
 div{
-    background-color: #527ACC;
+    background-color: #0052CC;
 }
 
+input[type="submit"] {
+    width: 150px;
+    display: block;
+    margin-bottom: 10px;
+    background-color: #001F4C;
+}
+
+input[type="button"] {
+    width: 150px;
+    display: block;
+    margin-bottom: 10px;
+    background-color: #001F4C;
+}
+
+input[type="text"] {
+    width: 150px;
+    display: block;
+    margin-bottom: 10px;
+    background-color: #001F4C;
+}
+
+input[type="select"] {
+    width: 150px;
+    display: block;
+    margin-bottom: 10px;
+    background-color: #001F4C;
+}
+
+input[type="password"] {
+    width: 150px;
+    display: block;
+    margin-bottom: 10px;
+    background-color: #001F4C;
+}
+
+input[type="name"] {
+    width: 150px;
+    display: block;
+    margin-bottom: 10px;
+    background-color: #001F4C;
+}
+
+select {
+    width: 150px;
+    display: block;
+    margin-bottom: 10px;
+    background-color: #001F4C;
+}
+
+btn btn-info {
+    color: white;
+    background-color: #001F4C;  
+}
 div.wraper{
     width: 1000px;
     margin: 0 auto;
@@ -37,9 +90,9 @@ div.wraper{
 }
 .wraper table{
     width: 100%;
-    
+
 }
- table th, table td
+table th, table td
 {
     padding: 5px 10px;
 }

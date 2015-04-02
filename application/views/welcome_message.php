@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <title>Rental</title>
 
-        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+      
     </head>
     <body>
 
@@ -37,6 +37,7 @@
         <div>
             
             <a href="register" >Zarejestruj </a>
+        
             
         </div>
 

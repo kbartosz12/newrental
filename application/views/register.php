@@ -4,17 +4,17 @@
         <meta charset="utf-8">
         <title>Rejestracja</title>
 
-        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
     </head>
     <body>
 
         <div id="container">
-            <?php if(validation_errors()): ?>
-            <div style="border: lpx solid red;">
-                 <?php echo "Są błędy. zobacz niżej" ?>
-        </div>
+            <?php if (validation_errors()): ?>
+                <div style="border: lpx solid red;">
+                    <?php echo "Są błędy. zobacz niżej" ?>
+                </div>
             <?php endif; ?>
-            
+
             <form method="post">
                 <table class="fullwidth border cell_input">
                     <tr>
