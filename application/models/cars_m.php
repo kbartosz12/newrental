@@ -15,4 +15,11 @@ class Cars_m extends MY_Model {
         $this->db->where('car_id', $car_id);
         return $this->db->get($this->table)->row();
     }
+    
+    public function get_all()
+    {
+        // Join "dołączy" do zapytania drugą tabelę brands, dzięki czemu będziemy mieć dostęp do nazwy marki
+        $this->db->join('brands', 'cars.brand_id = brands.brand_id');
+        return parent::get_all();
+    }
 }

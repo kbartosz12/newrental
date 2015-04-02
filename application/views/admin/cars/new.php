@@ -23,7 +23,14 @@
             </tr>
             <tr>
                 <td width="300px"><label for="login">Typ pojazdu:</label> <span class="required right">*</span></td>
-                <td><input type="text" name="car_type" value="<?= set_value('car_type'); ?>" required /></td>
+                <td>
+                    <select name="car_type">
+                        <option value="passenger">Osobowe</option>
+                        <option value="van">Bus</option>
+                        <option value="truck">Ciężarówka</option>
+                        <option value="other">Inne</option>
+                    </select>
+                </td>
                 <td class="error"><?php echo form_error('car_type'); ?></td>
             </tr>
             <tr>

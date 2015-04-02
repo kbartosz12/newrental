@@ -19,14 +19,15 @@
                         <tr>
                             <td>                           
 
-                                <?php echo $car->brand_id; ?>
+                                <?php echo $car->name; ?>
                              <?php //jak to zrobić, żeby wyświetlało markę samochodu, a nie jego id? ?>
                             </td>
                             <td>
                                 <?php echo $car->model; ?>
                             </td>
                             <td>
-                                <?php echo $car->car_type; ?>
+                                <?php // tu trzeba dodać funkcję tłumaczącą, albo dorzucić tabelę car_type (polecam)
+                                echo $car->car_type; ?>
                             </td>
                             <td>
                                 <?php echo $car->engine; ?>

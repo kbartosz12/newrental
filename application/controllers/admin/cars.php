@@ -12,7 +12,9 @@ class Cars extends CI_Controller {
         $data = array();
 
         $data['cars'] = $this->cars_m->get_all();
-        $data['brands'] = $this->brands_m->get_all();
+        //zobacz zawartość tablicy cars po dadaniu join i przed
+        //brands już nie potrzebujemy skoro dodaliśmy join
+        //$data['brands'] = $this->brands_m->get_all();
         $this->load->view('admin/header');
         $this->load->view('admin/cars/cars', $data);
         $this->load->view('admin/footer');
