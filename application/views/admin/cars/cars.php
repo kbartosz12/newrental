@@ -12,6 +12,7 @@
                     <th>Silnik</th>
                     <th>Liczba miejsc</th>
                     <th>Kolor</th>
+                    <th>Opcje</th>
                 </tr>
                 <?php if (!empty($cars)): ?>
                     <?php foreach ($cars as $car): ?>
@@ -20,7 +21,7 @@
                             <td>                           
 
                                 <?php echo $car->name; ?>
-                             <?php //jak to zrobić, żeby wyświetlało markę samochodu, a nie jego id? ?>
+                            
                             </td>
                             <td>
                                 <?php echo $car->model; ?>
@@ -30,13 +31,16 @@
                                 echo $car->car_type; ?>
                             </td>
                             <td>
-                                <?php echo $car->engine; ?>
+                                <?php echo $car->type; ?>
                             </td>
                             <td>
                                 <?php echo $car->seats; ?>
                             </td>
                             <td>
                                 <?php echo $car->color; ?>
+                            </td>
+                            <td>
+                                
                             </td>
 
                         </tr>
@@ -45,7 +49,7 @@
 
                 <?php else: ?>
                     <tr>
-                        <td colspan="3">brak użytkowników</td>
+                        <td colspan="3">brak pojazdów</td>
                     </tr>
                 <?php endif; ?>
             </thead>

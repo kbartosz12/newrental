@@ -6,6 +6,7 @@ class Cars extends CI_Controller {
         parent::__construct();
         $this->load->model('brands_m');
         $this->load->model('cars_m');
+        $this->load->model('engine_m');
     }
 
     public function index() {
@@ -41,7 +42,7 @@ class Cars extends CI_Controller {
                 'brand_id' => $this->input->post('brand_id'),
                 'model' => $this->input->post('model'),
                 'car_type' => $this->input->post('car_type'),
-                'engine' => $this->input->post('engine'),
+                'engine' => $this->input->post('engine_id'),
                 'seats' => $this->input->post('seats'),
                 'color' => $this->input->post('color')
             );
@@ -53,6 +54,7 @@ class Cars extends CI_Controller {
             
         }
         $view_data['brands'] = $this->brands_m->get_all();
+        $view_data['engines'] = $this->engine_m->get_all();
         $this->load->view('admin/header');
         $this->load->view('admin/cars/new', $view_data);
         $this->load->view('admin/footer');

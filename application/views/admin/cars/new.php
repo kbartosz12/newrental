@@ -33,11 +33,13 @@
                 </td>
                 <td class="error"><?php echo form_error('car_type'); ?></td>
             </tr>
-            <tr>
-                <td width="300px"><label for="login">Silnik:</label> <span class="required right">*</span></td>
-                <td><input type="text" name="engine" value="<?= set_value('engine'); ?>" required /></td>
-                <td class="error"><?php echo form_error('engine'); ?></td>
-            </tr>
+            <td><label for="repassword">Rodzaj silnika:</label> <span class="required right">*</span></td>
+                <td><select name="engine_id">
+                        <?php foreach ($engines as $engin): ?>
+                            <option value="<?php echo $engin->engine_id; ?>"><?php echo $engin->type; ?></option>
+                        <?php endforeach; ?>
+                    </select>
+                </td>
 
             <tr>
                 <td width="300px"><label for="login">Liczba miejsc:</label></td>
