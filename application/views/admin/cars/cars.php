@@ -20,18 +20,18 @@
                         <tr>
                             <td>                           
 
-                                <?php echo $car->name; ?>
+                                <?php echo $car->brand_name; ?>
                             
                             </td>
                             <td>
-                                <?php echo $car->model; ?>
+                                <?php echo $car->model_name; ?>
                             </td>
                             <td>
                                 <?php // tu trzeba dodać funkcję tłumaczącą, albo dorzucić tabelę car_type (polecam)
-                                echo $car->car_type; ?>
+                                echo $car->type; ?>
                             </td>
                             <td>
-                                <?php echo $car->type; ?>
+                                <?php //echo $car->type; ?>
                             </td>
                             <td>
                                 <?php echo $car->seats; ?>

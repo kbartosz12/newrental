@@ -11,6 +11,7 @@
         <link href="<?php echo base_url('assets/css/bootstrap.min.css') ?>" rel="stylesheet">
         <link href="<?php echo base_url('assets/css/font-awesome.min.css') ?>" rel="stylesheet">
         <link href="<?php echo base_url('assets/css/style.css') ?>" rel="stylesheet">
+        <script src="<?php echo base_url('assets/js/jquery.min.js') ?>"></script>
     </head>
     <body>
         <nav class="navbar navbar-default">

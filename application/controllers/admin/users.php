@@ -23,7 +23,8 @@ class Users extends CI_Controller {
      * Metoda a właściwie akcja odpalana dla kontrolera Users
      */
     public function index() {
-
+        
+        //$admin = $this->session->userdata('admin');
         $this->lista();
     }
 

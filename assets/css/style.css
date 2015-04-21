@@ -1,83 +1,83 @@
 body{
 
 
-    background-color: #0F2E4C;
+    background-color: #EBEBE0;
     width: auto;
     margin-left: 100px;
     margin-right: 100px;
     font-family: Tahoma, Georfia, serif;
-    color: white;
+    color: #00001A;
 
 }
 
 a:link {
-    color: #FFFFFF;
+    color: #00001A;
 }
 
 a:visited {
-    color: #FFFFFF;
+    color: #00001A;
 }
 
 a:hover {
-    color: #CFCFCF;
+    color: #00001A;
 }
 
 div{
-    background-color: #0052CC;
+    background-color: #FDFDFC;
 }
 
 input[type="submit"] {
     width: 150px;
     display: block;
     margin-bottom: 10px;
-    background-color: #001F4C;
+    background-color: #FDFDFC;
 }
 
 input[type="button"] {
     width: 150px;
     display: block;
     margin-bottom: 10px;
-    background-color: #001F4C;
+    background-color: #FDFDFC;
 }
 
 input[type="text"] {
     width: 150px;
     display: block;
     margin-bottom: 10px;
-    background-color: #001F4C;
+    background-color: #FDFDFC;
 }
 
 input[type="select"] {
     width: 150px;
     display: block;
     margin-bottom: 10px;
-    background-color: #001F4C;
+    background-color: #FDFDFC;
 }
 
 input[type="password"] {
     width: 150px;
     display: block;
     margin-bottom: 10px;
-    background-color: #001F4C;
+    background-color: #FDFDFC;
 }
 
 input[type="name"] {
     width: 150px;
     display: block;
     margin-bottom: 10px;
-    background-color: #001F4C;
+    background-color: #FDFDFC;
 }
 
 select {
     width: 150px;
     display: block;
     margin-bottom: 10px;
-    background-color: #001F4C;
+    background-color: #FDFDFC;
 }
 
 btn btn-info {
     color: white;
-    background-color: #001F4C;  
+    background-color: #FDFDFC;  
 }
 div.wraper{
     width: 1000px;
